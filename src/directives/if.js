@@ -95,7 +95,10 @@ module.exports = {
       var next
       while (next !== end) {
         next = cur.nextSibling
-        if (cur.contains(c.$el)) {
+        if (
+          cur === c.$el ||
+          cur.contains && cur.contains(c.$el)
+        ) {
           return true
         }
         cur = next
