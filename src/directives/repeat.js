@@ -477,7 +477,7 @@ module.exports = {
  */
 
 function findNextVm (vm, ref) {
-  var el = (vm._blockEnd || vm.$el).nextSibling
+  var el = (vm._blockEnd || vm.$el)
   while (!el.__vue__ && el !== ref) {
     el = el.nextSibling
   }
