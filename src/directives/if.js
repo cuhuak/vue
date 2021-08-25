@@ -121,7 +121,7 @@ module.exports = {
 }
 
 function callAttach (child) {
-  if (!child._isAttached) {
+  if (!child._isAttached && _.inDoc(child.$el)) {
     child._callHook('attached')
   }
 }
